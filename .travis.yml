@@ -1,0 +1,18 @@
+language: python
+matrix:
+    include:
+        - python: 3.4
+        - python: 3.5
+        - python: 3.6
+        - python: 3.7
+            dist: xenial
+            sudo: true
+install:
+    - pip install pipenv
+    - pipenv install --dev
+script:
+    - pipenv run tests
+after_success:
+    - pipenv run coverage
+notifications:
+    email: false

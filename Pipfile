@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+pycodestyle = "*"
+codecov = "*"
+nose = "*"
+
+[scripts]
+kirk = "python -m kirk"
+tests = "nosetests --with-coverage --cover-package=iss"
+coverage = "codecov"
